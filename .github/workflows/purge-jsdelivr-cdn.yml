@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Purge jsDelivr cache for abyss.css
         run: |
-          curl -s "https://purge.jsdelivr.net/gh/AumGupta/abyss-jellyfin@main/abyss.css"
-          curl -s "https://purge.jsdelivr.net/gh/AumGupta/abyss-jellyfin@main/styles/abyss-je.css"
-          curl -s "https://purge.jsdelivr.net/gh/AumGupta/abyss-jellyfin@main/styles/abyss-mbe.css"
-          echo "CDN purge triggered for abyss.css and styles/ overrides"
+          curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/abyss.css"
+          curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/styles/abyss-je.css"
+          curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/styles/abyss-mbe.css"
+          echo "CDN purge triggered for ${{ github.repository }} abyss.css and styles/ overrides"
